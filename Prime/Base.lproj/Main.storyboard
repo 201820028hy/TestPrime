@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +13,75 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Prime" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Prime Number Check" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eSe-S1-0Gf">
+                                <rect key="frame" x="94.5" y="70" width="186" height="41"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="41" id="oyi-8x-8sA"/>
+                                    <constraint firstAttribute="width" constant="186" id="rBo-Im-IbV"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ueR-R4-Z6T">
+                                <rect key="frame" x="89" y="141" width="197" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="197" id="BXX-Oy-22X"/>
+                                    <constraint firstAttribute="height" constant="30" id="OTE-VC-ahv"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="If2-xE-cI6">
+                                <rect key="frame" x="142" y="221" width="91" height="47"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="47" id="FOl-gd-eAL"/>
+                                    <constraint firstAttribute="width" constant="91" id="jYL-M1-PIn"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <state key="normal" title="Check"/>
+                                <connections>
+                                    <action selector="btnCheck:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6rG-13-dby"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jlg-l2-61v">
+                                <rect key="frame" x="73" y="298" width="229" height="46"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="46" id="CEM-jE-6Je"/>
+                                    <constraint firstAttribute="width" constant="229" id="SMg-6p-n1k"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Jlg-l2-61v" firstAttribute="top" secondItem="If2-xE-cI6" secondAttribute="bottom" constant="30" id="4Nl-0Z-Jem"/>
+                            <constraint firstItem="ueR-R4-Z6T" firstAttribute="top" secondItem="eSe-S1-0Gf" secondAttribute="bottom" constant="30" id="5Wx-Sc-oGK"/>
+                            <constraint firstItem="ueR-R4-Z6T" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="6bR-4a-wmh"/>
+                            <constraint firstItem="eSe-S1-0Gf" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="EXF-2y-pbf"/>
+                            <constraint firstItem="If2-xE-cI6" firstAttribute="top" secondItem="ueR-R4-Z6T" secondAttribute="bottom" constant="50" id="Q9O-jL-QHC"/>
+                            <constraint firstItem="If2-xE-cI6" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Vq9-WY-AdZ"/>
+                            <constraint firstItem="eSe-S1-0Gf" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="gGW-8Q-enk"/>
+                            <constraint firstItem="Jlg-l2-61v" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="nni-IN-ykA"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="lbCheck" destination="Jlg-l2-61v" id="HQp-cG-Cl5"/>
+                        <outlet property="txtPrime" destination="ueR-R4-Z6T" id="c8d-qw-umL"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="133.59999999999999" y="133.5832083958021"/>
         </scene>
     </scenes>
 </document>
